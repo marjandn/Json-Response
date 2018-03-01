@@ -63,6 +63,19 @@ public JsonResult test()
                                , JsonRequestBehavior.AllowGet);
       }
 ```
+****or sth like this****
+```
+ var gallery = (from u in db.Users 
+                        join g in db.Gallery on u.User_ID equals g.Gallery_Admin
+                        where u.User_Email == email && g.Gallery_ID == galleryId
+                           select new
+                        {
+                            Gallery_Name = g.Gallery_Name,
+                            Gallery_Desc = g.Gallery_Desc,
+                            GalleryType = new { GalleryType_ID = g.GalleryType.GalleryType_ID , GalleryType_Title = g.GalleryType.GalleryType_Title, GalleryType_Desc = g.GalleryType.GalleryType_Desc},
+                            Gallery_Time = g.Gallery_Time
+                        }).FirstOrDefault();
+```
 
 ***if you want to feth all fields of base table and ALSO all related records in each tables*** so we can do like bellow
 ```
