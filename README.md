@@ -1,5 +1,5 @@
 # Json-Response
-How to get Json response from Asp.net ( MVC ) to send to Android app or every where that need Json Format of Server Data
+How to get Json response from Asp.net ( MVC ) to send to Android app or every where that need Json Format of Server Data :)
 
 most of time we need to send data from server in [**Json**](https://www.json.org/) format for example for send data from server by Apis to Android app 
 exactly we need Json Format or [XML](https://en.wikipedia.org/wiki/XML) , but i personally use Json most of the time (and i think it's commonly more :) ).
